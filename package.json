@@ -6,7 +6,7 @@
   "module": "src/index.js",
   "scripts": {
     "build-dev": "webpack -c webpack.dev.js",
-    "build": "webpack -c webpack.prod.js",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && webpack -c webpack.prod.js",
     "prepublishOnly": "npm run build"
   },
   "repository": {

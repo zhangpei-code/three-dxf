@@ -87,9 +87,9 @@ function onSuccess(evt){
     //  and this discussion https://github.com/mrdoob/three.js/issues/7398 
     var font;
     var loader = new THREE.FontLoader();
-    loader.load( 'fonts/helvetiker_regular.typeface.json', function ( response ) {
+    loader.load( 'fonts/Alibaba_PuHuiTi_Regular.json', function ( response ) {
         font = response;
-        cadCanvas = new window.ThreeDxf.Viewer(dxf, document.getElementById('cad-view'), 1000, 800, font);
+        cadCanvas = new window.ThreeDxf.Viewer(dxf, document.getElementById('cad-view'), 1000, 800, font, 'fonts/Alibaba_PuHuiTi_Regular.ttf');
     });
     
 }

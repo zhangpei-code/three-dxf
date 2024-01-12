@@ -81,9 +81,10 @@ function getBulgeCurvePoints(startPoint, endPoint, bulge, segments) {
  * @param {Number} width - width of the rendering canvas in pixels
  * @param {Number} height - height of the rendering canvas in pixels
  * @param {Object} font - a font loaded with THREE.FontLoader 
+ * @param {Object} troikaFont - a font loaded with TroikaThreeTextLoader
  * @constructor
  */
-export function Viewer(data, parent, width, height, font) {
+export function Viewer(data, parent, width, height, font, troikaFont) {
 
     createLineTypeShaders(data);
 
@@ -315,7 +316,7 @@ export function Viewer(data, parent, width, height, font) {
             .replaceAll('\\P', '\n')
             .replaceAll('\\X', '\n');
 
-        textEnt.font = font;
+        textEnt.font = troikaFont;
         textEnt.fontSize = style.textHeight;
         textEnt.maxWidth = entity.width;
         textEnt.position.x = entity.position.x;
